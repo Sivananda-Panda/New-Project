@@ -1,0 +1,14 @@
+#Create a Model.()
+# create files in that as post.py
+#from models.post import Post
+
+class post(object):
+  def __init__(self):
+    self.title = "This is my title"
+    self.content = "This is my content"
+    self.author = "This is my author"
+    
+    
+    
+
+
