@@ -1,0 +1,38 @@
+#install Mongodb and execute mongod command in command prompt
+#to open the comnnection type Mongo in cmd
+#show dbs to see all the dbs exists
+# some of mongodb commands
+# use (db name)
+#show collections
+#db.students.insert({"name":"Jose","mark":99})
+#db.students.find({}) to find all the data in that colection
+
+
+# Connecting to python
+#create a reqirement file(reqirements.txt)
+#in it put pymongo==3.0.3(latest version)
+
+# now python code
+import pymongo
+
+uri = "mongodb://127.0.0.1:27017"
+
+#initializing mongo db client
+
+client = pymongo.MongoClient(uri)
+
+database = client['db name']
+
+collection = database['collection name']
+
+students = collection.find({})
+
+for students in students:
+  print(students)
+ 
+#simplifying the above through list comprehension
+
+students=[students for students in collection.find({})]
+
+print(students)
+
